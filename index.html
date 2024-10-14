@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<meta name="keywords" content="Player" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	
+	<script src="js/config.js" type="text/javascript"></script>
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/main.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="wrappers">
+	
+	<div class='main_button_parent'>
+		<button class='main_button' id='btn-prev' onClick='gotoPrevScreen();'>Prev </button>
+		<span class="tots">1/1</span>
+		<button class='main_button' id='btn-next' onClick='gotoNextScreen();'>Next </button>
+	</div>
+	<div class="containers">
+		<div id= 'startScreen'>
+			<img src='img/btn.png'>
+		</div>
+		<iframe src = '' class='_frame hide' id='_frame' name="_frame" scrolling="yes" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" ></iframe>
+	</div>
+	
+	<div class='finalScreen'>
+		<div class='_table'>
+			<div class='_tableHeader text-center'>Result <i class='fa fa-close' onclick="removeSummary(this);"></i></div>
+			<table>
+				<tbody>
+					<tr>
+						<td>Total Question</td>
+						<td id="totalcount"></td>
+					</tr>
+					<tr>
+						<td>Correct Answers</td>
+						<td id="correctcount"></td>
+					</tr>
+					<tr>
+						<td>Incorrect Answers</td>
+						<td id="incorrectcount"></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class='_tableFooter text-center'>
+				<button class="btn btn-primary start" onClick="window.location.reload()" id="start">Restart</button>
+			</div>
+		</div>
+	</div>
+	
+	<div id="feedbackDiv" class="hidden">
+		<div id="right-image">
+			<img id="iFace" src="img/Smile-Face.png" class="">
+			<img id="hands" src="img/hands-Up.png" class="">
+		</div>
+	</div>
+</div>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <p>Activity already attempted.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
